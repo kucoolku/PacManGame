@@ -1,8 +1,8 @@
 {
   "name": "食鬼大冒險",
   "short_name": "PacMan",
-  "start_url": "https://github.com/kucoolku/PacManGame/index.html",
-  "scope": "https://github.com/kucoolku/PacManGame/",
+  "start_url": "https://kucoolku.github.io/PacManGame/index.html",
+  "scope": "https://kucoolku.github.io/PacManGame/",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#000000",
@@ -19,3 +19,4 @@
     }
   ]
 }
+
