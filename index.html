@@ -1,0 +1,19 @@
+<script>
+        // --- 新的 SW 註冊邏輯 (會嘗試清除舊的錯誤) ---
+        if ('serviceWorker' in navigator) {
+            // 先嘗試移除所有舊的 Service Worker
+            navigator.serviceWorker.getRegistrations().then(function(registrations) {
+                for(let registration of registrations) {
+                    registration.unregister();
+                }
+            });
+
+            // 然後重新註冊新的
+            navigator.serviceWorker.register('sw.js')
+                .then(reg => console.log('SW Registered!', reg))
+                .catch(err => console.log('SW Error', err));
+        }
+        // ------------------------------------------
+
+        const grid = document.querySelector('.grid')
+        // ... (下面是你原本的遊戲代碼) ...
