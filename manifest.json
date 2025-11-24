@@ -1,8 +1,8 @@
 {
   "name": "食鬼大冒險",
   "short_name": "PacMan",
-  "start_url": "./index.html",
-  "scope": "./",
+  "start_url": "/PacManGame/index.html",
+  "scope": "/PacManGame/",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#000000",
