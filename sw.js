@@ -1,9 +1,9 @@
-const CACHE_NAME = 'pacman-v1';
+const CACHE_NAME = 'pacman-v2'; // 改個名字強迫更新快取
 const ASSETS = [
-  '/',
-  '/index.html',
-  '/manifest.json',
-  '/icon.png' // 如果你沒有放圖片，這行可能會報錯，但不影響遊戲運行
+  './',
+  './index.html',
+  './manifest.json',
+  './icon.png'
 ];
 
 // 安裝 Service Worker 並快取檔案
@@ -15,7 +15,7 @@ self.addEventListener('install', (e) => {
   );
 });
 
-// 攔截網路請求，如果有快取就用快取
+// 攔截網路請求
 self.addEventListener('fetch', (e) => {
   e.respondWith(
     caches.match(e.request).then((response) => {
